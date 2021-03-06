@@ -21,7 +21,7 @@ export class AppComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
     // ---> PRIMERO EN EJECUTARSE CRONOLOGICAMENTE
     // console.log() muestra mensajes en la consola del navegador (para abrir la consola se usa la tecla F12)
     console.log(`%c BY: ${DEVELOPER} FROM: app-component; ID: ${this.id++}. constructor()`, STYLES_FOR_LOGS);
-    this.saludo('R2D2', 40); // ----> EJEMPLO DE COMO INVOCAR UN METODO
+    this.saludo('R2D2', 40); // ----> EJEMPLO DE COMO INVOCAR UN METODO PUBLICO DESDE LA CLASE
   }
 
   ngOnInit() {
@@ -42,16 +42,21 @@ export class AppComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
   ngOnDestroy() {
     // ---> SE EJECUTA CUANDO SE FINALIZA LA CLASE
     console.log(`%c BY: ${DEVELOPER} FROM: app-component; ID: ${this.id++}. ngOnDestroy()`, STYLES_FOR_LOGS);
-    this.despedida('Luke', 18); // ----> EJEMPLO DE COMO INVOCAR UN METODO
+    this.despedida('Luke', 18); // ----> EJEMPLO DE COMO INVOCAR UN METODO PRIVADO DESDE LA CLASE
   }
 
-  // Ejemplo de un metodo publico, este metodo se puede invocar desde esta clase u otro lado.
+  // Ejemplo de un metodo publico, este metodo se invoca desde esta clase.
   saludo(nombre: string, edad: number) {
     const SALUDO = `Hola ${nombre}, tienes ${edad} años`;
     console.log(SALUDO);
   }
 
-  // Ejemplo de un metodo privado, este metodo solo se puede mandar a llamar en esta clase
+  // Ejemplo de un metodo publico, este metodo se invoca desde el template (html)..
+  saludoHtml(nombre: string, edad: number) {
+    return `Hola ${nombre}, tienes ${edad} años`;
+  }
+
+  // Ejemplo de un metodo privado, este metodo se invoca desde esta clase.
   private despedida(nombre: string, edad: number) {
     const DESPEDIDA = `Adios ${nombre}, tu edad es ${edad} años`;
     console.log(DESPEDIDA);
