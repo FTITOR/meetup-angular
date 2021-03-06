@@ -19,6 +19,7 @@ export class AppComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
   // (ES LO PRIMERO QUE SE EJECUTA AL INICIAR LA CLASE)
   constructor() {
     // ---> PRIMERO EN EJECUTARSE CRONOLOGICAMENTE
+    // console.log() muestra mensajes en la consola del navegador (para abrir la consola se usa la tecla F12)
     console.log(`%c BY: ${DEVELOPER} FROM: app-component; ID: ${this.id++}. constructor()`, STYLES_FOR_LOGS);
   }
 
