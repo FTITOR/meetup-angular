@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserDetailComponent } from './user-detail.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -8,7 +9,8 @@ import { UserDetailComponent } from './user-detail.component';
     UserDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class UserDetailModule { }
