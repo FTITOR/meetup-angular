@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    UserDetailComponent
   ],
   imports: [
     CommonModule,
