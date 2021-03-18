@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
 
+// Lazy loading
 const ROUTES: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'user-list', component: UserListComponent,  },
-  { path: 'user-detail', component: UserDetailComponent }
+  { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'user-list', loadChildren: () => import('./user-list/user-list.module').then(m => m.UserListModule) },
+  { path: 'user-detail', loadChildren: () => import('./user-detail/user-detail.module').then(m => m.UserDetailModule) }
 ];
 
 @NgModule({
