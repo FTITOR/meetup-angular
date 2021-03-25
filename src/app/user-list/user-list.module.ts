@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './user-list.component';
 import { RouterModule, Routes } from '@angular/router';
-import { UserService } from '../services/user/user.service';
+import { UserListService } from './user-list.service';
 
 // Definición de rutas "CHILD" para cargar especificamente el componente UserListComponent.
 export const ROUTES: Routes = [
@@ -18,7 +18,7 @@ export const ROUTES: Routes = [
     RouterModule.forChild(ROUTES)  // Agregar nuestras rutas al RouterModule.forChild (clase propia de angular), **NOTA: RUTAS ANIDADAS.
   ],
   providers: [
-    UserService
+    UserListService
   ]
 })
 export class UserListModule { }
