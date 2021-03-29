@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { USERS } from '../data';
 import { UserDetail } from './user-detail.model';
 
 // @Injectable() es un decorador de clase. Los "service" de angular deben de tener este decorador
@@ -9,12 +10,7 @@ export class UserDetailService {
   constructor() { }
 
   // Metodo publico que regresa un objeto de "UserDetail", donde "UserDetail" es una interface con atributos definidos.
-  getUserDetail(): UserDetail {
-    return USER;
+  getUserDetail(id: number): UserDetail {
+    return USERS.find(u => id === u.id);;
   }
-}
-
-
-export const USER: UserDetail = {
-  id: 3, name: 'ROGER', lastname: 'WATERS', email: 'test2@test.com', age: 72
 }

@@ -6,7 +6,7 @@ import { UserDetailService } from './user-detail.service';
 
 // ROUTING -> Definición de rutas "CHILD" para cargar especificamente el componente UserDetailComponent.
 const ROUTES: Routes = [
-  {path: '', component: UserDetailComponent}
+  {path: ':id', component: UserDetailComponent}
 ];
 
 @NgModule({

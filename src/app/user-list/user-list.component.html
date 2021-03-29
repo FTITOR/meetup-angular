@@ -3,20 +3,14 @@
 <table style="width:100%">
     <tr>
         <th>ID</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
         <th>Email</th>
-        <th>Age</th>
         <th></th>
     </tr>
     <tr *ngFor="let user of users">
         <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.lastname }}</td>
         <td>{{ user.email }}</td>
-        <td>{{ user.age }}</td>
         <td>
-            <a routerLink="/user-detail">VER</a>
+            <a routerLink="/user-detail/{{user.id}}">VER</a>
         </td>
     </tr>
 </table>
