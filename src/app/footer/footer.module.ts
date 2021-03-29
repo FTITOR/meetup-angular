@@ -4,13 +4,13 @@ import { FooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [
-    FooterComponent
+    FooterComponent // COMPONENT -> Declaración del component perteneciente al module (FooterComponent).
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    FooterComponent
+    FooterComponent // COMPONENT -> Exportar FooterComponent para poder usarlo en otros modules.
   ]
 })
 export class FooterModule { }

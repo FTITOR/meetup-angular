@@ -4,13 +4,13 @@ import { NavbarComponent } from './navbar.component';
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    NavbarComponent // COMPONENT -> Declaración del component perteneciente al module (NavbarComponent).
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent // COMPONENT -> Exportar NavbarComponent para poder usarlo en otros modules.
   ]
 })
 export class NavbarModule { }
