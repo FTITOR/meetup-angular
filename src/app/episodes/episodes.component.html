@@ -1,0 +1,21 @@
+<h2>Episodes</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Air date</th>
+        <th>Episode</th>
+        <th>Created</th>
+        <th>Detail</th>
+    </tr>
+
+    <tr *ngFor="let episode of episodes">
+        <td>{{episode.id}}</td>
+        <td>{{episode.name | uppercase}}</td>
+        <td>{{episode.air_date | date: 'short' }}</td>
+        <td>{{episode.episode | episode}}</td>
+        <td>{{episode.created | date: 'shortDate'}}</td>
+        <td>{{episode.url}}</td>
+    </tr>
+</table>
