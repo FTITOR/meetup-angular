@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { NavbarModule } from './navbar/navbar.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NavbarModule,
     FooterModule,
     AppRoutingModule,
