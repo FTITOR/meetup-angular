@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BasicFormComponent } from './basic-form.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UppercaseModule } from '../directives/uppercase/uppercase.directive.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const ROUTES: Routes = [
   {path: '', component: BasicFormComponent}
@@ -15,7 +16,8 @@ const ROUTES: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(ROUTES),
-    UppercaseModule
+    UppercaseModule,
+    ReactiveFormsModule
   ]
 })
 export class BasicFormModule { }

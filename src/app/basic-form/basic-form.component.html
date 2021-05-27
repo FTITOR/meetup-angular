@@ -1,17 +1,20 @@
 <form>
     <label for="name">Name:</label>
-    <input type="text" id="name" appUppercase>
+    <input type="text" id="name" [formControl]="name" appUppercase>
     <br>
+    {{name.valid}}
     <br>
 
     <label for="email">Email:</label>
-    <input type="email" id="email">
+    <input type="email" id="email" [formControl]="email">
     <br>
+    {{email.valid}}
     <br>
 
     <label for="message">Message:</label>
-    <textarea id="message" cols="30" rows="5" appUppercase></textarea>
+    <textarea id="message" cols="30" rows="5" [formControl]="message" appUppercase></textarea>
     <br>
+    {{message.valid}}
     <br>
 
     <button type="submit">Send message</button>
