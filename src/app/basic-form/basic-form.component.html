@@ -1,3 +1,5 @@
+
+<h1>Form control</h1>
 <form>
     <label for="name">Name:</label>
     <input type="text" id="name" [formControl]="name" appUppercase>
@@ -13,6 +15,29 @@
 
     <label for="message">Message:</label>
     <textarea id="message" cols="30" rows="5" [formControl]="message" appUppercase></textarea>
+    <br>
+    {{message.valid}}
+    <br>
+
+    <button type="submit">Send message</button>
+</form>
+
+<h1>Form group</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" appUppercase formControlName="name">
+    <br>
+    {{name.valid}}
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <br>
+    {{email.valid}}
+    <br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" cols="30" rows="5" appUppercase formControlName="message"></textarea>
     <br>
     {{message.valid}}
     <br>
